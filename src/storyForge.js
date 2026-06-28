@@ -3,4 +3,4 @@ import { getDB } from "./controllers/controllers.js";
 
 export const app = express();
 
-app.get("/", getDB);
+app.get("/story", getDB);
