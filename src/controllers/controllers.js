@@ -1,5 +1,9 @@
 import { pool } from "../../db.js";
 
+const greeting = async (req, res) => {
+  res.status(200).json({ message: "Welcome Kamal" });
+};
+
 const getDB = async (req, res) => {
   try {
     const results = await pool.query("SELECT * FROM nodes");
@@ -9,4 +13,4 @@ const getDB = async (req, res) => {
   }
 };
 
-export { getDB };
+export { getDB, greeting };
