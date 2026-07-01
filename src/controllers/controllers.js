@@ -9,7 +9,13 @@ const getDB = async (req, res) => {
     const results = await pool.query("SELECT * FROM nodes");
     res.status(200).json(results.rows);
   } catch (err) {
-    res.status(500).json({ error: `${err}` });
+    console.error("Full error :", err);
+    console.error("Error causes :", err.errors);
+
+    res.status(500).json({
+      error: `${err.messag}`,
+      causes: err.message.map((e) => e.message),
+    });
   }
 };
 
