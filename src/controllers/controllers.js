@@ -5,13 +5,6 @@ const greeting = async (req, res) => {
 };
 
 const getDB = async (req, res) => {
-  console.log("DB Config:", {
-    host: process.env.PGHOST,
-    user: process.env.PGUSER,
-    database: process.env.PGDATABASE,
-    port: process.env.PGPORT,
-    password: process.env.PGPASSWORD,
-  });
   try {
     const results = await pool.query("SELECT * FROM nodes");
     res.status(200).json(results.rows);
