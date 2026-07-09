@@ -8,10 +8,7 @@ app.use(
   cors({
     origin:
       process.env.NODE_ENV === "production"
-        ? [
-            "https://your-frontend-live-link.vercel.app",
-            "http://localhost:5173",
-          ]
+        ? ["https://your-frontend-live-link.vercel.app"]
         : true,
   }),
 );
