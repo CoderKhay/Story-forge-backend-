@@ -1,5 +1,12 @@
 import "dotenv/config";
+import cors from "cors";
 import { app } from "./src/storyForge.js";
+
+app.use(
+  cors({
+    origin: process.env.ALLOWED_ORIGIN,
+  }),
+);
 
 const port = process.env.PORT || 8000;
 
