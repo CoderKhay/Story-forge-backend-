@@ -4,10 +4,7 @@ import { app } from "./src/storyForge.js";
 
 app.use(
   cors({
-    origin: [
-      "http://localhost:5173",
-      "https://your-frontend-live-link.vercel.app",
-    ],
+    origin: ["http://localhost:5173", "https://forged-story.netlify.app"],
   }),
 );
 
