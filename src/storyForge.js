@@ -8,7 +8,10 @@ app.use(
   cors({
     origin:
       process.env.NODE_ENV === "production"
-        ? "https://forged-story.netlify.app"
+        ? [
+            "https://your-frontend-live-link.vercel.app",
+            "http://localhost:5173",
+          ]
         : true,
   }),
 );
