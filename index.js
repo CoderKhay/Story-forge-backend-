@@ -4,7 +4,10 @@ import { app } from "./src/storyForge.js";
 
 app.use(
   cors({
-    origin: process.env.ALLOWED_ORIGIN,
+    origin: [
+      "http://localhost:5173",
+      "https://your-frontend-live-link.vercel.app",
+    ],
   }),
 );
 
