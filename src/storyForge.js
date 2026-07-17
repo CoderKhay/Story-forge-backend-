@@ -8,7 +8,7 @@ app.use(
   cors({
     origin:
       process.env.NODE_ENV === "production"
-        ? "https://forged-story.netlify.app/"
+        ? "https://forged-story.netlify.app"
         : true,
   }),
 );
